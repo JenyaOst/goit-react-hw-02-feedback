@@ -5,9 +5,7 @@
   border-radius: 5px;
 }
 
-.statistics-table-row:nth-child(even) {
-  background-color: #4beef7;
-}
+
 
 .statistics-table-row:nth-child(4),
 .statistics-table-row:nth-child(5) {
