@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import { Component } from "react";
 import css from './FeedbackStatistics.module.css';
- class Statistics extends Component {
-    
+
+export class Statistics extends Component {
   render() {
-    const { good, neutral, bad } = this.props;
+    const { good, neutral, bad, total, positivePercentage } = this.props;
     return (
-        <>
+      <>
         <table className={css['statistics-table']}>
           <tbody>
             <tr className={css['statistics-table-row']}>
@@ -20,10 +20,18 @@ import css from './FeedbackStatistics.module.css';
               <td>Bad:</td>
               <td>{ bad }</td>
             </tr>
+            <tr className={css['statistics-table-row']}>
+              <td>Total:</td>
+              <td>{ total }</td>
+            </tr>
+            <tr className={css['statistics-table-row']}>
+              <td>Positive feedback:</td>
+              <td>{ positivePercentage }%</td>
+            </tr>
           </tbody>
         </table>
       </>
     )
   }
 }
-export {Statistics};
+
